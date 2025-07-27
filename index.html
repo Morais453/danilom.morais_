@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio de Danilo Morais</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #000;
+      color: #81a1d8;
+      line-height: 1.6;
+    }
+
+    header {
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #090d14;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      padding: 15px 0;
+    }
+
+    nav a {
+      color: #06254e;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #83b0f8;
+    }
+
+    section {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      margin: 20px;
+      color: #81a1d8;
+    }
+
+    footer {
+      background-color: #090d14;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    a {
+      color: #237cb8;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Danilo Morais</h1>
+    <p>Estudante de Ciência da Computação | Estagiário de TI | Foco em Backend Java</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>Sou Danilo Morais, estudante de Ciência da Computação e estagiário de TI no TRT da 8ª Região, onde atuo com suporte técnico, manutenção de sistemas internos e execução de testes de software.</p>
+    <p>Busco aplicar meus conhecimentos em Java, Spring Boot, SQL e metodologias ágeis na resolução de problemas reais, sustentação de sistemas e desenvolvimento backend.</p>
+  </section>
+
+  <section id="projetos">
+    <h2>Projetos</h2>
+    <ul>
+      <li><strong>API e Interface de Cadastro de Itens</strong>: CRUD completo com Python.</li>
+      <li><strong>RPG Educacional</strong>: Jogo de aprendizado em Java com JavaFX e integração com Java Compiler API.(Em andamento)</li>
+      <li><strong>Sistema de Vagas Tech</strong>: Aplicação web para busca de vagas, com filtros e integração com backend Java.(Em andamento)</li>
+    </ul>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Email: <a href="mailto:danmorais453@hotmail.com" target="_blank">danmorais453@hotmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/Morais453" target="_blank">Morais453</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/danilomoraisdev" target="_blank">danilomoraisdev</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Danilo Morais. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // Rolar suavemente para seções ao clicar nos links do menu
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = this.getAttribute('href').slice(1);
+        const section = document.getElementById(id);
+        if (section) {
+          section.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
